@@ -1,9 +1,6 @@
-
+// ignore: file_names
 import 'package:flutter/material.dart';
-
 import 'color.dart';
-
-
 
 sealed class AppTextStyle {
   static const appBarStyle = TextStyle(

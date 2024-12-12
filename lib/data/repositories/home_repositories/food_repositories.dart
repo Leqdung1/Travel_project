@@ -28,9 +28,9 @@ class PopularFoodRepositories {
   }
 
   Future<List<FoodModel>> searchFoodsByTitle(String query) async {
-     print('Searching for cultures with title: $query'); 
-    QuerySnapshot snapshot = await collectFoods.where('title', isGreaterThanOrEqualTo: query.toLowerCase()).where('title', isLessThanOrEqualTo: query.toLowerCase() + '\uf8ff').get();
-print('Searching for: $query, lowercased: ${query.toLowerCase()}');
+
+    QuerySnapshot snapshot = await collectFoods.where('title', isGreaterThanOrEqualTo: query.toLowerCase()).where('title', isLessThanOrEqualTo: '${query.toLowerCase()}\uf8ff').get();
+
 
     return snapshot.docs.map((doc) {
       return FoodModel.fromJson(doc.data() as Map<String, dynamic>);

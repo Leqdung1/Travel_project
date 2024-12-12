@@ -33,8 +33,8 @@ class PopularFestivalRepositories {
   // ignore: non_constant_identifier_names
   Future<List<FestivalModel>> SearchFestivalsByTitle(String query) async{
     
-    QuerySnapshot snapshot = await collectFestivals.where('title', isGreaterThanOrEqualTo: query.toLowerCase(),).where('title', isLessThanOrEqualTo: query.toLowerCase() + '\uf8ff').get();
-print('Searching for: $query, lowercased: ${query.toLowerCase()}');
+    QuerySnapshot snapshot = await collectFestivals.where('title', isGreaterThanOrEqualTo: query.toLowerCase(),).where('title', isLessThanOrEqualTo: '${query.toLowerCase()}\uf8ff').get();
+
 
     return snapshot.docs.map((doc) {
       return FestivalModel.fromJson(doc.data() as Map<String, dynamic>);

@@ -1,5 +1,4 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
-
 import '../../models/Home/destinations_model.dart';
 
 class PopularDestionationRepositories {
@@ -36,7 +35,7 @@ class PopularDestionationRepositories {
         .where('title', isGreaterThanOrEqualTo: query.toLowerCase())
         .where('title', isLessThanOrEqualTo: '${query.toLowerCase()}\uf8ff')
         .get();
-    print('Searching for: $query, lowercased: ${query.toLowerCase()}');
+  
 
     return snapshot.docs.map((doc) {
       return DestinationsModels.fromJson(doc.data() as Map<String, dynamic>);

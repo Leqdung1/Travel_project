@@ -69,11 +69,11 @@ class _DetailFoodPageState extends State<DetailFoodPage> {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      back(),
+                      const back(),
                       Container(
                         height: 40,
                         width: 40,
-                        decoration: BoxDecoration(
+                        decoration: const BoxDecoration(
                           color: Colors.white,
                           shape: BoxShape.circle,
                         ),
@@ -91,7 +91,7 @@ class _DetailFoodPageState extends State<DetailFoodPage> {
             ],
           ),
           Container(
-            margin: EdgeInsets.symmetric(
+            margin: const EdgeInsets.symmetric(
               horizontal: 16,
             ),
             child: Column(
@@ -128,7 +128,7 @@ class _DetailFoodPageState extends State<DetailFoodPage> {
                   ],
                 ),
                 Padding(
-                  padding: EdgeInsets.symmetric(
+                  padding: const EdgeInsets.symmetric(
                     vertical: 15,
                   ),
                   child: Text(
@@ -136,11 +136,11 @@ class _DetailFoodPageState extends State<DetailFoodPage> {
                     style: AppTextStyle.bodyStyle,
                   ),
                 ),
-                Text(
+                const Text(
                   'Ảnh minh họa',
                   style: AppTextStyle.headLineStyle,
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 20,
                 ),
                 SizedBox(
@@ -167,7 +167,7 @@ class _DetailFoodPageState extends State<DetailFoodPage> {
                           ),
                         ),
                       ),
-                      SizedBox(
+                      const SizedBox(
                         width: 10,
                       ),
                       ClipRRect(
@@ -188,7 +188,7 @@ class _DetailFoodPageState extends State<DetailFoodPage> {
                           ),
                         ),
                       ),
-                      SizedBox(
+                      const SizedBox(
                         width: 10,
                       ),
                       ClipRRect(
@@ -212,7 +212,7 @@ class _DetailFoodPageState extends State<DetailFoodPage> {
                     ],
                   ),
                 ),
-                Padding(
+                const Padding(
                   padding: EdgeInsets.symmetric(
                     vertical: 20,
                   ),
@@ -225,7 +225,7 @@ class _DetailFoodPageState extends State<DetailFoodPage> {
                   widget.history,
                   style: AppTextStyle.bodyStyle,
                 ),
-                Padding(
+                const Padding(
                   padding: EdgeInsets.symmetric(
                     vertical: 20,
                   ),
@@ -238,7 +238,7 @@ class _DetailFoodPageState extends State<DetailFoodPage> {
                   widget.ingredients,
                   style: AppTextStyle.bodyStyle,
                 ),
-                Padding(
+                const Padding(
                   padding: EdgeInsets.symmetric(
                     vertical: 20,
                   ),
@@ -257,16 +257,16 @@ class _DetailFoodPageState extends State<DetailFoodPage> {
           ElevatedButton(
             onPressed: () {},
             child: Container(
-              margin: EdgeInsets.symmetric(
+              margin: const EdgeInsets.symmetric(
                 vertical: 30,
               ),
               width: MediaQuery.sizeOf(context).width * 1,
-              padding: EdgeInsets.all(15),
+              padding: const EdgeInsets.all(15),
               decoration: BoxDecoration(
                 color: AppColors.primaryColor,
                 borderRadius: BorderRadius.circular(30),
               ),
-              child: Center(
+              child: const Center(
                 child: Text(
                   'Start a trip',
                   style: TextStyle(

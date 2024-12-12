@@ -254,7 +254,7 @@ class _SearchPageState extends State<SearchPage> {
                     default:
                       return DestinationsSearch(searchQuery: _searchQuery);
                   }
-                }).toList(),
+                }),
               ],
             ),
           ),

@@ -90,7 +90,7 @@ class _ExploreScreenState extends State<ExploreScreen> {
           ),
           SizedBox(
             height: MediaQuery.sizeOf(context).height * 0.75,
-            child: selectedSegment == 1 ? const SaveScreen() : PostScreen(),
+            child: selectedSegment == 1 ? const SaveScreen() : const PostScreen(),
           ),
         ],
       ),

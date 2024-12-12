@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
 
 class PostScreen extends StatefulWidget {
+  const PostScreen({super.key});
+
   @override
+  // ignore: library_private_types_in_public_api
   _PostScreenState createState() => _PostScreenState();
 }
 
@@ -41,7 +44,7 @@ class _PostScreenState extends State<PostScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Bảng tin'),
+        title: const Text('Bảng tin'),
       ),
       body: Column(
         children: [
@@ -49,7 +52,7 @@ class _PostScreenState extends State<PostScreen> {
             padding: const EdgeInsets.all(16.0),
             child: TextField(
               controller: _controller,
-              decoration: InputDecoration(
+              decoration: const InputDecoration(
                 hintText: 'Miêu tả chuyến đi của bạn...',
                 border: OutlineInputBorder(),
               ),
@@ -65,7 +68,7 @@ class _PostScreenState extends State<PostScreen> {
               itemCount: _posts.length,
               itemBuilder: (context, index) {
                 return Card(
-                  margin: EdgeInsets.all(8.0),
+                  margin: const EdgeInsets.all(8.0),
                   child: Padding(
                     padding: const EdgeInsets.all(16.0),
                     child: Row(
@@ -74,17 +77,17 @@ class _PostScreenState extends State<PostScreen> {
                         Expanded(
                           child: Text(
                             _posts[index],
-                            style: TextStyle(fontSize: 16),
+                            style: const TextStyle(fontSize: 16),
                           ),
                         ),
                         Row(
                           children: [
                             IconButton(
-                              icon: Icon(Icons.edit),
+                              icon: const Icon(Icons.edit),
                               onPressed: () => _editPost(index),
                             ),
                             IconButton(
-                              icon: Icon(Icons.delete),
+                              icon: const Icon(Icons.delete),
                               onPressed: () => _deletePost(index),
                             ),
                           ],
